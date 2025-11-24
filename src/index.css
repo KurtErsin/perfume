@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Perfume Catalog Design System */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 15%;
+
+    /* PATERMO Brand Color */
+    --patermo-gold: 45 100% 70%;
+
+    /* Luxury Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    /* Premium Interface */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Elegant Primary Palette */
+    --primary: 240 6% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Sophisticated Secondary */
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    /* Refined Muted Tones */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    /* Luxury Accent - Updated with PATERMO Gold */
+    --accent: 45 100% 70%;
+    --accent-foreground: 240 6% 10%;
+
+    /* Gender Color Coding */
+    --male: 220 70% 50%;
+    --female: 330 70% 50%;
+    --unisex: 270 30% 40%;
+
+    /* Note Badge Colors */
+    --woody: 30 50% 40%;
+    --sweet: 340 80% 60%;
+    --spicy: 15 70% 45%;
+    --citrus: 50 90% 55%;
+    --fresh: 180 60% 50%;
+
+    /* Premium Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(240 6% 10%), hsl(240 4% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 5% 96%), hsl(0 0% 100%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 5% 98%));
+
+    /* Elegant Shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(240 6% 10% / 0.1);
+    --shadow-card: 0 4px 20px -4px hsl(240 6% 10% / 0.08);
+    --shadow-hover: 0 8px 30px -8px hsl(240 6% 10% / 0.15);
+
+    /* UI Elements */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 6% 10%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --sidebar-background: 222.2 84% 4.9%;
+
+    --sidebar-foreground: 210 40% 98%;
+
+    --sidebar-primary: 210 40% 98%;
+
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+
+    --sidebar-accent: 217.2 32.6% 17.5%;
+
+    --sidebar-accent-foreground: 210 40% 98%;
+
+    --sidebar-border: 217.2 32.6% 17.5%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+}
+
+/* PATERMO Brand Color Classes */
+.border-male {
+  @apply border-[#AF8F5C];
+}
+
+.border-female {
+  @apply border-[#AF8F5C];
+}
+
+.border-unisex {
+  @apply border-[#AF8F5C];
+}
+
+/* Note Badge Styling */
+.badge-woody {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-sweet {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-spicy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-citrus {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-fresh {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-floral {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-white-floral {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-amber {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-musky {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-powdery {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-vanilla {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-aromatic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-fresh-spicy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-warm-spicy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-leather {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-fruity {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-green {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-patchouli {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-rose {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-iris {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-earthy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-animalic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-oud {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-smoky {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-tobacco {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-honey {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-cinnamon {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-almond {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-cherry {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-nutty {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-balsamic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-rum {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-mineral {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-ozonic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-aquatic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-marine {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-soapy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-tropical {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-coconut {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-salty {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-caramel {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-chocolate {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-coffee {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-tuberose {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-yellow-floral {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-mossy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-herbal {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-sand {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-violet {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-cacao {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-anis {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-lactonic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-aldehydic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-metallic {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-soft-spicy {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-lavender {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-saffron {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-neroli {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-black-pepper {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-mandarin {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-pepper {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-sage {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-cardamom {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-black-currant {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-tea {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+.badge-bergamot {
+  @apply bg-[#AF8F5C]/10 text-[#AF8F5C] border-[#AF8F5C]/20;
+}
+
+/* Luxury Card Styling */
+.card-luxury {
+  @apply bg-card border border-border rounded-xl shadow-card hover:shadow-hover transition-all duration-300;
+}
+
+/* Button Styling */
+.btn-luxury {
+  @apply bg-[#AF8F5C] hover:bg-[#AF8F5C]/90 text-white border-[#AF8F5C] transition-colors;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
