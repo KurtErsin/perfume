@@ -13043,6 +13043,15 @@ const unsortedPerfumes: Perfume[] = [
         slug: 'creed-eladaria', 
         isNew: true,
       },
+      {
+        id: '1719',
+        name: 'Erem', 
+        brand: 'Erem', 
+        gender: 'female',
+        notes: ['rose', 'musky', 'powdery', 'floral', 'amber'],
+        slug: 'creed-eladaria', 
+        isNew: true,
+      },
   ];
 
 
