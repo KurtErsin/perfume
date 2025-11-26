@@ -13010,7 +13010,7 @@ const unsortedPerfumes: Perfume[] = [
       {
         id: '1715',
         name: 'Inspired by MILLION GOLD WOMEN - PACO RABANNE (W818)', 
-        brand: 'YSL',
+        brand: 'PACO RABANNE',
         gender: 'female',
         notes: ['white floral', 'sweet', 'honey', 'citrus', 'fruity'],
         slug: 'paco-rabanne-million-gold-women', 
