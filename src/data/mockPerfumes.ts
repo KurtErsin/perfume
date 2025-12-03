@@ -13043,15 +13043,6 @@ const unsortedPerfumes: Perfume[] = [
         slug: 'creed-eladaria', 
         isNew: true,
       },
-         {
-        id: '1719',
-        name: 'Inspired by ERSIN - EREM (W821)', 
-        brand: 'EREM', 
-        gender: 'female',
-        notes: ['rose', 'musky', 'powdery', 'floral', 'amber'],
-        slug: 'creed-eladaria', 
-        isNew: true,
-      },
   ];
 
 
